@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="index.css" />
+        <script src="index.js" defer></script>
+        <script type="module" src="https://unpkg.com/@microsoft/fast-components"></script>
+    </head>
+    <body>
+        <fast-design-system-provider use-defaults>    
+            <fast-card>
+                <div class="pw-container">
+                    <div class="pw-header">
+                        <div class="pw">
+                            <span id="pw">8523Zs79#Qwe09</span>
+                            <fast-button id="copy">Copy</fast-button>
+                        </div>
+                    </div>
+                    <br/>
+                    <fast-divider></fast-divider>
+                    <div class="pw-body">
+                        <div class="form-control">
+                            <fast-text-field id="len" for="len" value="15" type="number" min="2" max="30">Password Length</fast-text-field>
+                        </div>
+                        <div class="form-control">
+                            <fast-checkbox id="upper" for="upper">Contains Uppercase Letters</fast-checkbox>
+                        </div>
+                        <div class="form-control">
+                            <fast-checkbox id="lower" for="lower">Contains Lowercase Letters</fast-checkbox>
+                        </div>
+                        <div class="form-control">
+                            <fast-checkbox id="number" for="number">Contains Numbers</fast-checkbox>
+                        </div>
+                        <div class="form-control">
+                            <fast-checkbox id="symbol" for="symbol">Contains Symbols</fast-checkbox>
+                        </div>
+                        <br/>
+                        <fast-divider></fast-divider>
+                        <fast-button class="generate" id="generate">Generate Password</fast-button>
+                        
+                        <br/>
+                    </div>
+                </div>
+            </fast-card>
+        </fast-design-system-provider>
+    </body>
+</html>
